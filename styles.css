@@ -1,14 +1,14 @@
 :root {
-  --bg: #f2ecdc;
-  --bg-soft: rgba(255, 255, 255, 0.56);
-  --panel: rgba(16, 25, 31, 0.9);
-  --ink: #11181c;
-  --ink-soft: rgba(17, 24, 28, 0.72);
-  --line: rgba(17, 24, 28, 0.12);
-  --accent: #d15f3d;
-  --accent-2: #0d8c85;
-  --highlight: #f7b267;
-  --shadow: 0 24px 80px rgba(17, 24, 28, 0.12);
+  --bg: #dce8ef;
+  --bg-soft: rgba(248, 251, 253, 0.68);
+  --panel: rgba(7, 20, 33, 0.92);
+  --ink: #0c1d2b;
+  --ink-soft: rgba(12, 29, 43, 0.72);
+  --line: rgba(12, 29, 43, 0.12);
+  --accent: #f06449;
+  --accent-2: #1989a4;
+  --highlight: #8bd3e6;
+  --shadow: 0 24px 80px rgba(12, 29, 43, 0.14);
   --radius-lg: 28px;
   --radius-md: 18px;
   --radius-sm: 999px;
@@ -28,9 +28,9 @@ body {
   font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(circle at top left, rgba(13, 140, 133, 0.22), transparent 28%),
-    radial-gradient(circle at top right, rgba(209, 95, 61, 0.18), transparent 24%),
-    linear-gradient(135deg, #f6f0de 0%, #efe5cf 52%, #f4ebdd 100%);
+    radial-gradient(circle at top left, rgba(25, 137, 164, 0.24), transparent 30%),
+    radial-gradient(circle at top right, rgba(240, 100, 73, 0.16), transparent 26%),
+    linear-gradient(135deg, #edf4f8 0%, #dfeaf0 48%, #f5efe7 100%);
 }
 
 body::before {
@@ -39,8 +39,8 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(17, 24, 28, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(17, 24, 28, 0.035) 1px, transparent 1px);
+    linear-gradient(rgba(12, 29, 43, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(12, 29, 43, 0.035) 1px, transparent 1px);
   background-size: 40px 40px;
   mask-image: radial-gradient(circle at center, black 50%, transparent 100%);
 }
@@ -65,9 +65,9 @@ a {
   z-index: 10;
   padding: 0.9rem 1.1rem;
   margin-bottom: 2rem;
-  border: 1px solid rgba(17, 24, 28, 0.08);
+  border: 1px solid rgba(12, 29, 43, 0.08);
   border-radius: var(--radius-sm);
-  background: rgba(246, 240, 222, 0.74);
+  background: rgba(237, 244, 248, 0.78);
   backdrop-filter: blur(18px);
 }
 
@@ -98,6 +98,14 @@ a {
   text-decoration: none;
   font-size: 0.9rem;
   color: var(--ink-soft);
+  transition: color 180ms ease;
+}
+
+.brand:hover,
+.brand:focus-visible,
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: var(--accent);
 }
 
 .hero,
@@ -201,19 +209,23 @@ h3 {
 }
 
 .button-primary {
-  background: var(--ink);
-  color: #f8f4e8;
+  background: linear-gradient(135deg, var(--accent) 0%, #ff8a69 100%);
+  color: #fff8f4;
 }
 
 .button-secondary {
-  border: 1px solid rgba(17, 24, 28, 0.12);
-  background: rgba(255, 255, 255, 0.48);
+  border: 1px solid rgba(25, 137, 164, 0.18);
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.button-secondary:hover {
+  border-color: rgba(240, 100, 73, 0.28);
 }
 
 .status-panel {
   color: #f8f4e8;
   background:
-    linear-gradient(180deg, rgba(7, 13, 16, 0.96) 0%, rgba(18, 32, 35, 0.92) 100%);
+    linear-gradient(180deg, rgba(7, 20, 33, 0.97) 0%, rgba(18, 58, 78, 0.94) 100%);
 }
 
 .status-list {
@@ -261,7 +273,7 @@ h3 {
 .project-card {
   padding: 1.4rem;
   border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.38);
+  background: rgba(255, 255, 255, 0.52);
 }
 
 .projects,
@@ -289,7 +301,7 @@ h3 {
   width: 180px;
   height: 180px;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(247, 178, 103, 0.28), transparent 66%);
+  background: radial-gradient(circle, rgba(139, 211, 230, 0.3), transparent 66%);
 }
 
 .callout {
@@ -297,7 +309,7 @@ h3 {
   padding: 1.6rem;
   border-radius: var(--radius-lg);
   background:
-    linear-gradient(135deg, rgba(209, 95, 61, 0.92) 0%, rgba(17, 24, 28, 0.9) 100%);
+    linear-gradient(135deg, rgba(25, 137, 164, 0.96) 0%, rgba(240, 100, 73, 0.88) 100%);
 }
 
 .callout .eyebrow,
@@ -315,13 +327,13 @@ h3 {
   padding: 1rem 1.1rem;
   border-radius: 16px;
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.5);
   transition: transform 180ms ease, background-color 180ms ease;
 }
 
 .contact-panel a:hover {
   transform: translateX(4px);
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .site-footer {
