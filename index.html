@@ -6,8 +6,12 @@
     <title>임백균 | 개인 사이트</title>
     <meta
       name="description"
-      content="임백균의 프로젝트, 실험, 앞으로 공개할 작업을 정리하는 GitHub Pages 사이트."
+      content="임백균의 프로젝트, 스택, 앞으로 공개할 작업을 정리하는 GitHub Pages 개인 사이트"
     >
+    <meta name="site-owner" content="Limbeakgyun">
+    <meta name="site-repo" content="limbeakgyun.github.io">
+    <meta name="site-branch" content="main">
+    <meta name="site-file" content="index.html">
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
   </head>
@@ -15,111 +19,177 @@
     <div class="page-shell">
       <header class="topbar">
         <a class="brand" href="#home">LBG / 2026</a>
-        <nav class="site-nav" aria-label="주요 메뉴">
-          <a href="#about">소개</a>
-          <a href="#work">작업</a>
-          <a href="#contact">연락</a>
-        </nav>
+        <div class="topbar-right">
+          <nav class="site-nav" aria-label="주요 메뉴">
+            <a href="#about"><span data-edit-id="nav-about">소개</span></a>
+            <a href="#work"><span data-edit-id="nav-work">작업</span></a>
+            <a href="#contact"><span data-edit-id="nav-contact">연락</span></a>
+          </nav>
+          <button id="adminTrigger" class="admin-trigger" type="button" hidden>
+            편집
+          </button>
+        </div>
       </header>
 
       <main id="home">
         <section class="hero reveal">
           <div class="hero-copy">
-            <p class="eyebrow">GitHub Pages 시작점</p>
-            <h1>임백균의 작업과 실험을 정리하는 개인 사이트.</h1>
-            <p class="lead">
-              이 페이지는 프로젝트, 실험, 앞으로 공개할 작업을 담아두기 위한 가벼운 홈 베이스다.
-              별도 빌드 없이 GitHub Pages에서 바로 동작하도록 구성했다.
+            <p class="eyebrow" data-edit-id="hero-eyebrow">GitHub Pages 시작점</p>
+            <h1 data-edit-id="hero-title">임백균의 작업과 스택을 정리하는 개인 사이트</h1>
+            <p class="lead" data-edit-id="hero-lead">
+              이 페이지는 프로젝트, 소개, 공개할 작업을 빠르게 모아두기 위한 개인 허브다.
+              별도 빌드 없이 GitHub Pages에서 바로 동작하도록 가볍게 구성했다.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="https://github.com/Limbeakgyun" target="_blank" rel="noreferrer">GitHub 프로필</a>
-              <a class="button button-secondary" href="https://limbeakgyun.github.io/" target="_blank" rel="noreferrer">라이브 사이트</a>
+              <a class="button button-primary" href="https://github.com/Limbeakgyun" target="_blank" rel="noreferrer">
+                <span data-edit-id="hero-github-label">GitHub 프로필</span>
+              </a>
+              <a class="button button-secondary" href="https://limbeakgyun.github.io/" target="_blank" rel="noreferrer">
+                <span data-edit-id="hero-live-label">라이브 사이트</span>
+              </a>
             </div>
           </div>
 
           <aside class="status-panel" aria-label="사이트 요약">
-            <p class="panel-label">빠른 요약</p>
+            <p class="panel-label" data-edit-id="status-panel-label">빠른 요약</p>
             <ul class="status-list">
-              <li><span>형식</span><strong>정적 HTML / CSS / JS</strong></li>
-              <li><span>배포</span><strong>GitHub Pages 메인 브랜치 루트</strong></li>
-              <li><span>초점</span><strong>프로젝트, 실험, 프로필</strong></li>
+              <li>
+                <span data-edit-id="status-label-1">형식</span>
+                <strong data-edit-id="status-value-1">정적 HTML / CSS / JS</strong>
+              </li>
+              <li>
+                <span data-edit-id="status-label-2">배포</span>
+                <strong data-edit-id="status-value-2">GitHub Pages 메인 브랜치 루트</strong>
+              </li>
+              <li>
+                <span data-edit-id="status-label-3">초점</span>
+                <strong data-edit-id="status-value-3">프로젝트, 스택, 포트폴리오</strong>
+              </li>
             </ul>
           </aside>
         </section>
 
         <section id="about" class="info-grid reveal">
           <article class="info-card">
-            <p class="card-kicker">소개</p>
-            <h2>빠르게 읽히고, 손쉽게 고칠 수 있게.</h2>
-            <p>
-              구조를 단순하게 유지해서 스크린샷, 저장소 링크, 소개 문구를 나중에 추가해도
-              사이트 전체를 다시 만들 필요가 없도록 잡아뒀다.
+            <p class="card-kicker" data-edit-id="about-kicker">소개</p>
+            <h2 data-edit-id="about-title">빠르게 손보고 천천히 채워 넣는 개인 사이트.</h2>
+            <p data-edit-id="about-copy">
+              구조를 단순하게 유지해서 소개 문구, 프로젝트 설명, 링크만 바꿔도 전체 인상을 다시 정리할 수 있게 만들었다.
             </p>
           </article>
           <article class="info-card">
-            <p class="card-kicker">방향</p>
-            <h2>코드와 게임 작업을 함께 담을 수 있게.</h2>
-            <p>
-              현재 구조는 소프트웨어 프로젝트, Unity 프로토타입, 개발 메모,
-              그리고 작은 쇼케이스 작업까지 무리 없이 담을 수 있다.
+            <p class="card-kicker" data-edit-id="direction-kicker">방향</p>
+            <h2 data-edit-id="direction-title">코드와 게임 작업을 같이 보여주는 공간.</h2>
+            <p data-edit-id="direction-copy">
+              웹 프론트엔드 실험, Unity 프로젝트, 개발 메모, 도구 스크립트를 한 곳에서 이어서 보여줄 계획이다.
             </p>
           </article>
         </section>
 
         <section id="work" class="projects reveal">
           <div class="section-heading">
-            <p class="eyebrow">주요 영역</p>
-            <h2>지금 이 사이트가 보여주기 좋은 세 가지.</h2>
+            <p class="eyebrow" data-edit-id="work-eyebrow">주요 영역</p>
+            <h2 data-edit-id="work-title">지금 이 사이트가 보여주기 좋은 세 가지.</h2>
           </div>
           <div class="project-grid">
             <article class="project-card">
               <p class="project-index">01</p>
-              <h3>3D 프로토타입</h3>
-              <p>
-                Unity 게임플레이 테스트, 레벨 실험, 짧은 버티컬 슬라이스를 정리하기 좋다.
+              <h3 data-edit-id="project-title-1">3D 프로젝트</h3>
+              <p data-edit-id="project-copy-1">
+                Unity 게임 플레이, 시스템 설계, 구현 과정을 정리해서 현재 작업 흐름을 보여준다.
               </p>
             </article>
             <article class="project-card">
               <p class="project-index">02</p>
-              <h3>웹 프로젝트</h3>
-              <p>
-                정적 페이지, 프론트엔드 작업, 작은 웹 앱처럼 깔끔한 소개가 필요한 결과물을 담는다.
+              <h3 data-edit-id="project-title-2">웹 프로젝트</h3>
+              <p data-edit-id="project-copy-2">
+                정적 페이지, 인터랙션 실험, 화면 구성 작업처럼 결과를 바로 확인할 수 있는 작업을 모은다.
               </p>
             </article>
             <article class="project-card">
               <p class="project-index">03</p>
-              <h3>개발 도구</h3>
-              <p>
-                자동화 스크립트, 유틸리티, 작업 흐름 실험처럼 문서화할 가치가 있는 도구를 보여준다.
+              <h3 data-edit-id="project-title-3">개발 도구</h3>
+              <p data-edit-id="project-copy-3">
+                자동화 스크립트, 유틸리티, 작업 문서를 묶어서 실제로 쓰는 개발 습관을 보여준다.
               </p>
             </article>
           </div>
         </section>
 
         <section class="callout reveal">
-          <p class="eyebrow">다음 단계</p>
-          <h2>이제 실제 저장소, 이미지, 연락처 정보로 채워 넣으면 된다.</h2>
-          <p>
-            구조는 이미 배포 가능한 상태다. 내용만 바꾸면 바로 개인 포트폴리오로 쓸 수 있다.
+          <p class="eyebrow" data-edit-id="callout-eyebrow">다음 단계</p>
+          <h2 data-edit-id="callout-title">이제 프로젝트 링크와 실제 소개 문구를 채우면 바로 쓸 수 있다.</h2>
+          <p data-edit-id="callout-copy">
+            사이트 안에서 문구를 직접 고치고 저장하면 원본 `index.html`에 바로 반영되도록 편집 모드를 붙였다.
           </p>
         </section>
 
         <section id="contact" class="contact reveal">
           <div class="section-heading">
-            <p class="eyebrow">연락</p>
-            <h2>첫 연락 창구는 GitHub로 두면 충분하다.</h2>
+            <p class="eyebrow" data-edit-id="contact-eyebrow">연락</p>
+            <h2 data-edit-id="contact-title">기본 연락 창구는 GitHub면 충분하다.</h2>
           </div>
           <div class="contact-panel">
-            <a href="https://github.com/Limbeakgyun" target="_blank" rel="noreferrer">github.com/Limbeakgyun</a>
-            <a href="https://limbeakgyun.github.io/" target="_blank" rel="noreferrer">limbeakgyun.github.io</a>
+            <a href="https://github.com/Limbeakgyun" target="_blank" rel="noreferrer">
+              <span data-edit-id="contact-link-1">github.com/Limbeakgyun</span>
+            </a>
+            <a href="https://limbeakgyun.github.io/" target="_blank" rel="noreferrer">
+              <span data-edit-id="contact-link-2">limbeakgyun.github.io</span>
+            </a>
           </div>
         </section>
       </main>
 
       <footer class="site-footer">
-        <p>임백균</p>
-        <p><span id="year"></span> / GitHub Pages 정적 사이트</p>
+        <p data-edit-id="footer-name">임백균</p>
+        <p><span id="year"></span> / <span data-edit-id="footer-copy">GitHub Pages 정적 사이트</span></p>
       </footer>
     </div>
+
+    <aside id="editorDrawer" class="editor-drawer" hidden aria-live="polite">
+      <div class="editor-card">
+        <div class="editor-header">
+          <div>
+            <p class="editor-kicker">Owner Editor</p>
+            <p class="editor-account" id="editorAccount">인증 대기</p>
+          </div>
+          <button id="editorClose" class="editor-close" type="button" aria-label="편집 패널 닫기">
+            닫기
+          </button>
+        </div>
+
+        <p class="editor-copy">
+          `?edit=1`에서만 열리는 편집 패널이다. GitHub 토큰을 확인한 뒤 네 계정일 때만 글씨 편집과 저장을 허용한다.
+        </p>
+
+        <form id="editorAuthForm" class="editor-auth">
+          <label for="editorToken">GitHub 토큰</label>
+          <input
+            id="editorToken"
+            class="editor-input"
+            type="password"
+            autocomplete="off"
+            placeholder="github_pat_..."
+          >
+          <button class="editor-submit" type="submit">소유자 확인</button>
+        </form>
+
+        <div id="editorActions" class="editor-actions" hidden>
+          <button id="startEdit" class="editor-control" type="button">편집 시작</button>
+          <button id="saveEdit" class="editor-control editor-control-primary" type="button">저장</button>
+          <button id="cancelEdit" class="editor-control" type="button">취소</button>
+          <button id="logoutEdit" class="editor-control" type="button">로그아웃</button>
+        </div>
+
+        <p class="editor-note">
+          권장 권한: 이 저장소 하나만 선택한 fine-grained token + `Contents` 읽기/쓰기.
+          토큰은 현재 탭의 세션 저장소에만 유지된다.
+        </p>
+
+        <p id="editorStatus" class="editor-status" data-kind="info">
+          편집 패널을 열려면 주소 뒤에 `?edit=1`을 붙여 접속하면 된다.
+        </p>
+      </div>
+    </aside>
   </body>
 </html>
