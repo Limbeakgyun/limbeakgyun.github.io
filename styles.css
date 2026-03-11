@@ -1,14 +1,14 @@
 :root {
-  --bg: #dce8ef;
-  --bg-soft: rgba(248, 251, 253, 0.68);
-  --panel: rgba(7, 20, 33, 0.92);
-  --ink: #0c1d2b;
-  --ink-soft: rgba(12, 29, 43, 0.72);
-  --line: rgba(12, 29, 43, 0.12);
-  --accent: #f06449;
-  --accent-2: #1989a4;
-  --highlight: #8bd3e6;
-  --shadow: 0 24px 80px rgba(12, 29, 43, 0.14);
+  --bg: #eef3f7;
+  --bg-soft: rgba(255, 255, 255, 0.82);
+  --panel: rgba(11, 28, 52, 0.94);
+  --ink: #10233b;
+  --ink-soft: rgba(16, 35, 59, 0.72);
+  --line: rgba(16, 35, 59, 0.12);
+  --accent: #69bff4;
+  --accent-2: #1d3f6e;
+  --highlight: #d9ecf8;
+  --shadow: 0 24px 80px rgba(16, 35, 59, 0.12);
   --radius-lg: 28px;
   --radius-md: 18px;
   --radius-sm: 999px;
@@ -28,9 +28,9 @@ body {
   font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(circle at top left, rgba(25, 137, 164, 0.24), transparent 30%),
-    radial-gradient(circle at top right, rgba(240, 100, 73, 0.16), transparent 26%),
-    linear-gradient(135deg, #edf4f8 0%, #dfeaf0 48%, #f5efe7 100%);
+    radial-gradient(circle at top left, rgba(105, 191, 244, 0.22), transparent 30%),
+    radial-gradient(circle at top right, rgba(29, 63, 110, 0.12), transparent 28%),
+    linear-gradient(135deg, #f7fafc 0%, #eef3f7 50%, #e4ebf1 100%);
 }
 
 body::before {
@@ -67,7 +67,7 @@ a {
   margin-bottom: 2rem;
   border: 1px solid rgba(12, 29, 43, 0.08);
   border-radius: var(--radius-sm);
-  background: rgba(237, 244, 248, 0.78);
+  background: rgba(255, 255, 255, 0.78);
   backdrop-filter: blur(18px);
 }
 
@@ -209,23 +209,23 @@ h3 {
 }
 
 .button-primary {
-  background: linear-gradient(135deg, var(--accent) 0%, #ff8a69 100%);
-  color: #fff8f4;
+  background: linear-gradient(135deg, var(--accent-2) 0%, var(--accent) 100%);
+  color: #ffffff;
 }
 
 .button-secondary {
-  border: 1px solid rgba(25, 137, 164, 0.18);
-  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(16, 35, 59, 0.12);
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .button-secondary:hover {
-  border-color: rgba(240, 100, 73, 0.28);
+  border-color: rgba(105, 191, 244, 0.4);
 }
 
 .status-panel {
-  color: #f8f4e8;
+  color: #f4f8fc;
   background:
-    linear-gradient(180deg, rgba(7, 20, 33, 0.97) 0%, rgba(18, 58, 78, 0.94) 100%);
+    linear-gradient(180deg, rgba(11, 28, 52, 0.98) 0%, rgba(29, 63, 110, 0.94) 100%);
 }
 
 .status-list {
@@ -250,7 +250,7 @@ h3 {
 
 .status-list span {
   font-size: 0.82rem;
-  color: rgba(248, 244, 232, 0.66);
+  color: rgba(232, 240, 248, 0.72);
 }
 
 .status-list strong {
@@ -273,7 +273,7 @@ h3 {
 .project-card {
   padding: 1.4rem;
   border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.52);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .projects,
@@ -301,7 +301,7 @@ h3 {
   width: 180px;
   height: 180px;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(139, 211, 230, 0.3), transparent 66%);
+  background: radial-gradient(circle, rgba(105, 191, 244, 0.26), transparent 66%);
 }
 
 .callout {
@@ -309,13 +309,13 @@ h3 {
   padding: 1.6rem;
   border-radius: var(--radius-lg);
   background:
-    linear-gradient(135deg, rgba(25, 137, 164, 0.96) 0%, rgba(240, 100, 73, 0.88) 100%);
+    linear-gradient(135deg, rgba(105, 191, 244, 0.9) 0%, rgba(29, 63, 110, 0.96) 100%);
 }
 
 .callout .eyebrow,
 .callout h2,
 .callout p {
-  color: #fff7ea;
+  color: #f8fbff;
 }
 
 .contact-panel {
@@ -327,13 +327,13 @@ h3 {
   padding: 1rem 1.1rem;
   border-radius: 16px;
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.76);
   transition: transform 180ms ease, background-color 180ms ease;
 }
 
 .contact-panel a:hover {
   transform: translateX(4px);
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(217, 236, 248, 0.72);
 }
 
 .site-footer {
